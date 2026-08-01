@@ -1,0 +1,96 @@
+@import url('https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@400,500,700,800,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        --background: 240 6% 4%;
+        --foreground: 0 0% 100%;
+        --card: 240 6% 10%;
+        --card-foreground: 0 0% 100%;
+        --popover: 240 6% 10%;
+        --popover-foreground: 0 0% 100%;
+        --primary: 13 100% 50%;
+        --primary-foreground: 0 0% 100%;
+        --secondary: 240 5% 12%;
+        --secondary-foreground: 0 0% 100%;
+        --muted: 240 5% 12%;
+        --muted-foreground: 240 5% 65%;
+        --accent: 240 5% 14%;
+        --accent-foreground: 0 0% 100%;
+        --destructive: 0 84% 60%;
+        --destructive-foreground: 0 0% 100%;
+        --border: 0 0% 100% / 0.1;
+        --input: 240 5% 16%;
+        --ring: 13 100% 50%;
+        --radius: 0.25rem;
+    }
+}
+
+@layer base {
+    * {
+        border-color: rgba(255, 255, 255, 0.1);
+    }
+    html {
+        scroll-behavior: auto;
+    }
+    body {
+        margin: 0;
+        background-color: #09090b;
+        color: #ffffff;
+        font-family: 'IBM Plex Sans', sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        overflow-x: hidden;
+    }
+    ::selection {
+        background-color: #FF2A00;
+        color: #ffffff;
+    }
+}
+
+@layer utilities {
+    .font-display {
+        font-family: 'Cabinet Grotesk', sans-serif;
+    }
+    .font-body {
+        font-family: 'IBM Plex Sans', sans-serif;
+    }
+    .font-mono {
+        font-family: 'IBM Plex Mono', monospace;
+    }
+    .text-stroke {
+        -webkit-text-stroke: 1.5px rgba(255, 255, 255, 0.35);
+        color: transparent;
+    }
+    .text-stroke-primary {
+        -webkit-text-stroke: 1.5px #FF2A00;
+        color: transparent;
+    }
+    .grain {
+        position: fixed;
+        inset: 0;
+        z-index: 9999;
+        pointer-events: none;
+        opacity: 0.05;
+        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    }
+}
+
+/* custom scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #09090b;
+}
+::-webkit-scrollbar-thumb {
+    background: #27272a;
+    border-radius: 0;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #FF2A00;
+}

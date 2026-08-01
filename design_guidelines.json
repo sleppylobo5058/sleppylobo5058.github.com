@@ -1,0 +1,135 @@
+{
+  "theme": "dark",
+  "archetype": "Swiss & High-Contrast",
+  "brand": {
+    "name": "Núcleo Digital",
+    "slogan": "Software que impulsa tu negocio",
+    "owner": "Cesar Ramos",
+    "location": "Mexico",
+    "personality": "Award-worthy, bold, authoritative, cutting-edge, professional"
+  },
+  "colors": {
+    "background": "#09090b",
+    "surface": "#18181b",
+    "surface_glass": "rgba(24, 24, 27, 0.6)",
+    "primary": "#FF2A00",
+    "primary_hover": "#E62600",
+    "text_primary": "#FFFFFF",
+    "text_secondary": "#A1A1AA",
+    "border": "rgba(255,255,255,0.1)",
+    "whatsapp": "#25D366",
+    "whatsapp_hover": "#20BD5A"
+  },
+  "typography": {
+    "headings": {
+      "family": "Cabinet Grotesk, sans-serif",
+      "weights": ["400", "800"],
+      "tracking": "tracking-tighter",
+      "instruction": "Use Cabinet Grotesk for all headings. Never use Inter for headings. Keep leading tight (leading-none)."
+    },
+    "body": {
+      "family": "IBM Plex Sans, sans-serif",
+      "weights": ["400", "500"],
+      "instruction": "Use IBM Plex Sans for body text to give a highly technical, precise feel. Keep tracking normal and leading relaxed."
+    },
+    "marquee": {
+      "family": "Cabinet Grotesk, sans-serif",
+      "weight": "800",
+      "transform": "uppercase",
+      "instruction": "Massive text for marquee (text-7xl or larger), transparent with text-stroke or solid muted."
+    }
+  },
+  "spacing_and_layout": {
+    "philosophy": "Generous Spacing Philosophy. Use 2-3x more spacing than typical designs. Use p-12, p-16, p-24, p-32 for sections.",
+    "grid_strategy": "The 'Tetris' Grid (Mode A) for the Services section. Asymmetry, Visual Tension, Art. Use wide gaps (gap-8 to gap-12).",
+    "containers": "Containers with borders must have internal padding (p-6 or p-8) to prevent text collision."
+  },
+  "motion": {
+    "libraries": ["framer-motion", "react-fast-marquee", "lenis"],
+    "hero_reveal": "Kinetic large hero text with on-load masked line-by-line reveal. Use Framer Motion: wrap text lines in a container with overflow-hidden, and animate the text's 'y' property from 100% to 0%.",
+    "scroll_reveal": "Framer motion scroll reveals for all major sections (fade up, slow transition).",
+    "smooth_scroll": "Implement Lenis for smooth momentum scrolling. It adds weight and makes the site feel premium.",
+    "parallax": "Subtle parallax on images in the services section using Framer Motion useScroll and useTransform."
+  },
+  "sections_blueprint": [
+    {
+      "id": "header",
+      "type": "Glassmorphism Nav",
+      "details": "Sticky header (z-50) with backdrop-blur-xl and bg-black/60. Minimal logo 'Núcleo Digital' on left, links (Inicio, Servicios, Manifiesto, Contacto) on right. Primary CTA button."
+    },
+    {
+      "id": "hero",
+      "type": "Kinetic Typography",
+      "details": "Massive heading 'Software que impulsa tu negocio'. Line-by-line reveal. Background: Deep Void Black. Subtle 3D/abstract glow or tech element behind the text. Primary CTA 'Inicia tu Proyecto'. Padding: py-32."
+    },
+    {
+      "id": "manifesto",
+      "type": "Numbered Chapters",
+      "details": "Swiss layout. 3 numbered chapters (01. Precisión, 02. Velocidad, 03. Escalabilidad). Huge '01' numbers (text-6xl text-primary). Staggered layout. High contrast text. Emotional, authoritative copy."
+    },
+    {
+      "id": "marquee",
+      "type": "Editorial Marquee",
+      "details": "Use react-fast-marquee. 'NÚCLEO DIGITAL — SOFTWARE QUE IMPULSA TU NEGOCIO —'. Slow drift. Outline text style (text-transparent stroke-white) mixed with solid text."
+    },
+    {
+      "id": "services",
+      "type": "Bento / Tetris Grid",
+      "details": "Grid cols 1 md:grid-cols-12 gap-8. Images treated deliberately (spotlight, clipped frames). Cards have 1px border-white/10 and flat dark background.\n- Creación de páginas web (col-span-8 row-span-2)\n- Apps para ventas (col-span-4 row-span-1)\n- Apps de inventario (col-span-4 row-span-1)\n- Recolección de datos (col-span-full md:col-span-12 row-span-1 wide layout)."
+    },
+    {
+      "id": "contact",
+      "type": "Form Section",
+      "details": "Minimalist contact form (Name, Email, Message). Functional look. Shadcn UI Input/Textarea highly customized (dark mode, square corners, 1px borders). Uses solid Signal Red submit button."
+    },
+    {
+      "id": "floating_whatsapp",
+      "type": "Fixed Action",
+      "details": "Bottom right fixed WhatsApp icon button. Green background. Hover scale up."
+    }
+  ],
+  "visual_enhancers": {
+    "surfaces": "Grid Borders (The 'Technical' Look) for services. Glassmorphism for Header. Solid dark flat surfaces for cards.",
+    "borders": "1px delicate strokes (border-white/10). No soft shadows on dark mode. High contrast.",
+    "textures": "Subtle noise overlay (grain) across the whole site to give a premium, tactile 'film' quality."
+  },
+  "component_instructions": {
+    "forms": "Use Shadcn Form, Input, Textarea. Strip generic styles, make them fit the Swiss Brutalist theme.",
+    "buttons": "Sharp corners or very slight rounding (rounded-sm). High contrast hover states."
+  },
+  "image_urls": {
+    "web_creation": {
+      "url": "https://images.unsplash.com/photo-1702144418583-db89bc40c33d?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxNzV8MHwxfHNlYXJjaHwzfHxzb2Z0d2FyZSUyMGRldmVsb3BlciUyMG9mZmljZSUyMGRhcmt8ZW58MHx8fHwxNzg0ODM5OTA2fDA&ixlib=rb-4.1.0&q=85",
+      "description": "Laptop on wooden desk in dark environment. For 'Creación de páginas web' service."
+    },
+    "sales_apps": {
+      "url": "https://images.pexels.com/photos/17249214/pexels-photo-17249214.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "description": "Smartphone displaying apps dark. For 'Apps para ventas'."
+    },
+    "inventory_apps": {
+      "url": "https://images.pexels.com/photos/30341205/pexels-photo-30341205.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "description": "Dark narrow warehouse aisle. For 'Apps de inventario'."
+    },
+    "data_collection": {
+      "url": "https://images.unsplash.com/photo-1544380904-c686aad2fc40?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMzN8MHwxfHNlYXJjaHw0fHxtb2Rlcm4lMjBhYnN0cmFjdCUyMHRlY2glMjBkYXRhJTIwZGFya3xlbnwwfHx8fDE3ODQ2NDUxMzZ8MA&ixlib=rb-4.1.0&q=85",
+      "description": "3D computer graphics red/dark. For 'Recolección de datos'."
+    },
+    "hero_abstract": {
+      "url": "https://images.unsplash.com/photo-1758073519996-6d3c63b4922c?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMzN8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBhYnN0cmFjdCUyMHRlY2glMjBkYXRhJTIwZGFya3xlbnwwfHx8fDE3ODQ2NDUxMzZ8MA&ixlib=rb-4.1.0&q=85",
+      "description": "Abstract blue glowing dots. Optional for background textures."
+    }
+  },
+  "universal_guidelines_for_main_agent": [
+    "Do not use transparent background in header. Use backdrop-blur-xl bg-black/60.",
+    "Do not center align the main App container. Leave text-align left.",
+    "All interactive elements MUST include a data-testid attribute.",
+    "Implement Lenis for smooth scrolling in a top-level wrapper.",
+    "Use Framer Motion for line-by-line reveal in Hero.",
+    "Never use AI assistant emojis for icons. Use lucide-react.",
+    "Create depth through layered design and z-index hierarchy, but keep shadows minimal in dark mode (prefer borders)."
+  ],
+  "accessibility": {
+    "contrast": "Ensure minimum 4.5:1 contrast for normal text. Use APCA guidelines. Signal Red CTA with White text must be legible.",
+    "motion": "Respect prefers-reduced-motion media query for all Framer Motion animations."
+  }
+}
